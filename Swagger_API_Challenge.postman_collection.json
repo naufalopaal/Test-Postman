@@ -1,0 +1,463 @@
+{
+	"info": {
+		"_postman_id": "5edce86c-cc6c-4455-89d2-5d95e0c300c8",
+		"name": "Swagger - API Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14780971"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "POST Auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"full_name\": \"Gus Sudirman\",\r\n  \"email\": \"dukun@mail.com\",\r\n  \"password\": \"1q2w3e4r5t\",\r\n  \"phone_number\": \"08123456789\",\r\n  \"address\": \"Kayangan\",\r\n  \"image_url\": \"nul\",\r\n  \"city\": \"Kayangan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://market-final-project.herokuapp.com/auth/register",
+							"protocol": "https",
+							"host": [
+								"market-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Auth Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"pesulapmerah@mail.com\",\r\n  \"password\": \"1q2w3e4r5t\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://market-final-project.herokuapp.com/auth/login",
+							"protocol": "https",
+							"host": [
+								"market-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seller - product",
+			"item": [
+				{
+					"name": "POST seller - product",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9wYWxAbWFpbC5jb20iLCJpYXQiOjE2NjE0ODM5NzJ9.fWqbLfLByln7c9lrW5Z5d-odS19uAH6JMNfh6Tx0AlY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Ayam Guling",
+									"description": "name desc",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Ayam Guling Kriuk",
+									"description": "desc desc",
+									"type": "text"
+								},
+								{
+									"key": "base_price",
+									"value": "500002",
+									"description": "base_price desc",
+									"type": "text"
+								},
+								{
+									"key": "category_ids",
+									"value": "1",
+									"description": "category desc",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Bogor",
+									"description": "location desc",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"description": "image desc",
+									"type": "file",
+									"src": "aji.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://market-final-project.herokuapp.com/seller/product",
+							"protocol": "https",
+							"host": [
+								"market-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"seller",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET seller - product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlc3VsYXBtZXJhaEBtYWlsLmNvbSIsImlhdCI6MTY2MTQ4ODk3OX0.tOflDWTK4cVJcsnmnGhrOH-ZsTtLSsL5XocNcQj2Dzs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://market-final-project.herokuapp.com/seller/product",
+							"protocol": "https",
+							"host": [
+								"market-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"seller",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET seller - product id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlc3VsYXBtZXJhaEBtYWlsLmNvbSIsImlhdCI6MTY2MTQ4ODk3OX0.tOflDWTK4cVJcsnmnGhrOH-ZsTtLSsL5XocNcQj2Dzs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://market-final-project.herokuapp.com/seller/product",
+							"protocol": "https",
+							"host": [
+								"market-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"seller",
+								"product"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE seller - product id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlc3VsYXBtZXJhaEBtYWlsLmNvbSIsImlhdCI6MTY2MTQ4ODk3OX0.tOflDWTK4cVJcsnmnGhrOH-ZsTtLSsL5XocNcQj2Dzs",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://market-final-project.herokuapp.com/seller/product/1349",
+							"protocol": "https",
+							"host": [
+								"market-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"seller",
+								"product",
+								"1349"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "buyer - product",
+			"item": [
+				{
+					"name": "GET buyer - product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://market-final-project.herokuapp.com/buyer/product",
+							"protocol": "https",
+							"host": [
+								"market-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"buyer",
+								"product"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "available",
+									"disabled": true
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "Penglaris Jajanan",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET buyer - product id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://market-final-project.herokuapp.com/buyer/product",
+							"protocol": "https",
+							"host": [
+								"market-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"buyer",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "buyer - order",
+			"item": [
+				{
+					"name": "POST buyer - order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlc3VsYXBtZXJhaEBtYWlsLmNvbSIsImlhdCI6MTY2MTQ4ODk3OX0.tOflDWTK4cVJcsnmnGhrOH-ZsTtLSsL5XocNcQj2Dzs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"product_id\": 1295,\r\n  \"bid_price\": 7654321\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://market-final-project.herokuapp.com/buyer/order",
+							"protocol": "https",
+							"host": [
+								"market-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"buyer",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET buyer - order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlc3VsYXBtZXJhaEBtYWlsLmNvbSIsImlhdCI6MTY2MTQ4ODk3OX0.tOflDWTK4cVJcsnmnGhrOH-ZsTtLSsL5XocNcQj2Dzs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://market-final-project.herokuapp.com/buyer/order",
+							"protocol": "https",
+							"host": [
+								"market-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"buyer",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET buyer - order id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlc3VsYXBtZXJhaEBtYWlsLmNvbSIsImlhdCI6MTY2MTQ4ODk3OX0.tOflDWTK4cVJcsnmnGhrOH-ZsTtLSsL5XocNcQj2Dzs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://market-final-project.herokuapp.com/buyer/order",
+							"protocol": "https",
+							"host": [
+								"market-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"buyer",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT buyer - order id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlc3VsYXBtZXJhaEBtYWlsLmNvbSIsImlhdCI6MTY2MTQ4ODk3OX0.tOflDWTK4cVJcsnmnGhrOH-ZsTtLSsL5XocNcQj2Dzs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bid_price\": 123456\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://market-final-project.herokuapp.com/buyer/order/1267",
+							"protocol": "https",
+							"host": [
+								"market-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"buyer",
+								"order",
+								"1267"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
